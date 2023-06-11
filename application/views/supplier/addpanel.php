@@ -60,14 +60,9 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <label class="col-md-3 text-md-right" for="date">Date</label>
-                    <div class="col-md-9">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-user-cog"></i></span>
-                            </div>
-                            <input value="<?= set_value('date', date('Y-m-d')); ?>" name="date" id="date" type="text" class="form-control date" placeholder="Date and Day">
-                        </div>
+                    <label class="col-md-4 text-md-right" for="date">Entry Date</label>
+                    <div class="col-md-4">
+                        <input value="<?= set_value('date', date('Y-m-d')); ?>" name="date" id="date" type="text" class="form-control date" placeholder="Tanggal Masuk...">
                         <?= form_error('date', '<small class="text-danger">', '</small>'); ?>
                     </div>
                 </div>
@@ -81,30 +76,6 @@
                             <input value="<?= set_value('panel_vendor'); ?>" name="panel_vendor" id="panel_vendor" type="text" class="form-control" placeholder="Panel Vendor">
                         </div>
                         <?= form_error('panel_vendor', '<small class="text-danger">', '</small>'); ?>
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <label class="col-md-3 text-md-right" for="production">Production</label>
-                    <div class="col-md-9">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-user-tie"></i></span>
-                            </div>
-                            <input value="<?= set_value('production'); ?>" name="production" id="production" type="text" class="form-control" placeholder="Production">
-                        </div>
-                        <?= form_error('production', '<small class="text-danger">', '</small>'); ?>
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <label class="col-md-3 text-md-right" for="engineering">Engineering</label>
-                    <div class="col-md-9">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-user-tie"></i></span>
-                            </div>
-                            <input value="<?= set_value('engineering'); ?>" name="engineering" id="engineering" type="text" class="form-control" placeholder="Engineering">
-                        </div>
-                        <?= form_error('Engineering', '<small class="text-danger">', '</small>'); ?>
                     </div>
                 </div>
                 <div class="row form-group">

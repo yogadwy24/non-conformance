@@ -1,4 +1,5 @@
 <?= $this->session->flashdata('pesan'); ?>
+
 <div class="card shadow-sm border-bottom-primary">
 	<div class="card-header bg-white py-3">
 		<div class="row">
@@ -96,7 +97,8 @@
 							<th>No</th>
 							<th>Panel Name</th>
 							<th>Panel Number</th>
-							<th>Conditions</th>
+							<th>Date</th>
+							<th>Quality Inspector</th>
 							<th>Action</th>
 						</tr>
 						</thead>
@@ -110,11 +112,12 @@
 									<td><?= $no++; ?></td>
 									<td><?= $s['panel_name']; ?></td>
 									<td><?= $s['panel_number']; ?></td>
-									<td><?= $s['conditions']; ?></td>
+									<td><?= $s['date']; ?></td>
+									<td><?= $s['quality_inspector']; ?></td>
 									<th>
-                                		<a href="<?= base_url('supplier/edit/') . $s['id_supplier'] ?>" class="btn btn-circle btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-                                		<a href="<?= base_url('supplier/ncr/'). $s['id_supplier'] ?>" class="btn btn-circle btn-success btn-sm"><i class="fa fa-check"></i></a>
-                                		<a onclick="return confirm('Yakin ingin hapus?')" href="<?= base_url('supplier/delete/') . $s['id_supplier'] ?>" class="btn btn-circle btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                		<a href="<?= base_url('supplier/editpanel/') . $s['id_panel'] ?>" class="btn btn-circle btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+                                		<a href="<?= base_url('supplier/ncr/'). $s['id_panel'] ?>" class="btn btn-circle btn-success btn-sm"><i class="fa fa-check"></i></a>
+                                		<a onclick="return confirm('Yakin ingin hapus?')" href="<?= base_url('supplier/delete/') . $s['id_panel'] ?>" class="btn btn-circle btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                             		</th>
 								</tr>
 							<?php endforeach; ?>

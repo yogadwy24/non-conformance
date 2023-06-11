@@ -92,7 +92,6 @@ class Supplier extends CI_Controller
 			$this->template->load('templates/dashboard', 'supplier/add', $data);
 		} else {
 			$input = $this->input->post(null, true);
-
 			if ($add == "panel") {
 				$input['supplier_id'] = $spp;
 				$save = $this->admin->insert('project', $input);
@@ -152,6 +151,44 @@ class Supplier extends CI_Controller
 		$data['supplier'] = $this->admin->get('supplier', ["id_supplier" => $getId]);
 		$data['projects'] = $this->admin->getPanels($getId);
 		$this->template->load('templates/dashboard', 'supplier/detail', $data);
+	}
+
+	public function ncr($getId)
+	{
+		$data['title'] = "Non Conformance (NC) Finding in Factory Routine Test";
+		$data['supplier'] = $this->admin->get('supplier', ["id_supplier" => $getId]);
+		$data['projects'] = $this->admin->getPanels($getId);
+		$this->template->load('templates/dashboard', 'supplier/ncr', $data);
+	}
+
+	public function editpanel($getId){
+		$add = $this->uri->segment(3);
+		$data['title'] = "Non - Conformance Report";
+		$data['projects'] = $this->admin->get('project', ["id_panel" => $getId]);
+		
+		$this->form_validation->set_rules('panel_name', 'Panel Name', 'required');
+		$this->form_validation->set_rules('panel_number', 'Panel Number', 'required');
+		$this->form_validation->set_rules('quality_inspector', 'Panel Number', 'required');
+		$this->form_validation->set_rules('date', 'Panel Number', 'required');
+		$this->form_validation->set_rules('production', 'Production', 'required');
+		$this->form_validation->set_rules('engineering', 'Engineering', 'required');
+		$this->form_validation->set_rules('conditions', 'Conditions', 'required');
+		
+		if ($this->form_validation->run() == false) {
+			$this->template->load('templates/dashboard', 'supplier/editpanel', $data);
+		} else {
+			$input = $this->input->post(null, true);
+			var_dump($input);
+			$update = $this->admin->update('project', 'id_panel', $getId, $input);
+
+			if ($update) {
+				set_pesan('Data Updated');
+				redirect('supplier/editpanel/'. $getId);
+			} else {
+				set_pesan('Something went wrong');
+				redirect('supplier/editpanel/' . $getId);
+			}
+		}
 	}
 
 //	public function addpanel()

@@ -46,15 +46,17 @@ class Barang extends CI_Controller
             $this->template->load('templates/dashboard', 'barang/add', $data);
         } else {
             $input = $this->input->post(null, true);
-            $insert = $this->admin->insert('barang', $input);
+            var_dump($input);
+            exit;
+            // $insert = $this->admin->insert('barang', $input);
 
-            if ($insert) {
-                set_pesan('Data saved successfully!');
-                redirect('barang');
-            } else {
-                set_pesan('Something went wrong');
-                redirect('barang/add');
-            }
+            // if ($insert) {
+            //     set_pesan('Data saved successfully!');
+            //     redirect('barang');
+            // } else {
+            //     set_pesan('Something went wrong');
+            //     redirect('barang/add');
+            // }
         }
     }
 

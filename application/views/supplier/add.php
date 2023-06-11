@@ -170,7 +170,7 @@
 									<span class="input-group-text" id="basic-addon1"><i
 												class="fa fa-fw fa-user-cog"></i></span>
 								</div>
-								<input value="<?= set_value('date'); ?>" name="date" id="date" type="text"
+								<input value="<?= set_value('date'); ?>" name="date" id="date" type="date"
 									   class="form-control" placeholder="Date and Day">
 							</div>
 							<?= form_error('date', '<small class="text-danger">', '</small>'); ?>

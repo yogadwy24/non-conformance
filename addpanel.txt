@@ -1,0 +1,36 @@
+<div class="row form-group">
+                    <label class="col-md-3 text-md-right" for="production">Production</label>
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-user-tie"></i></span>
+                            </div>
+                            <input value="<?= set_value('production'); ?>" name="production" id="production" type="text" class="form-control" placeholder="Production">
+                        </div>
+                        <?= form_error('production', '<small class="text-danger">', '</small>'); ?>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-md-3 text-md-right" for="engineering">Engineering</label>
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-user-tie"></i></span>
+                            </div>
+                            <input value="<?= set_value('engineering'); ?>" name="engineering" id="engineering" type="text" class="form-control" placeholder="Engineering">
+                        </div>
+                        <?= form_error('Engineering', '<small class="text-danger">', '</small>'); ?>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label class="col-md-3 text-md-right" for="conditions">Conditions</label>
+                    <div class="col-md-9">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-fw fa-user-tie"></i></span>
+                            </div>
+                            <input value="<?= set_value('conditions'); ?>" name="conditions" id="conditions" type="text" class="form-control" placeholder="conditions">
+                        </div>
+                        <?= form_error('Engineering', '<small class="text-danger">', '</small>'); ?>
+                    </div>
+                </div>
