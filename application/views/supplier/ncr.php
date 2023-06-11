@@ -40,17 +40,17 @@
 									<p><?= $supplier["vendor_panel"] ?></p>
 								</div>
 								<div class="col-lg-6">
-									<p class="font-weight-bold text-primary">Production</p>
+									<p class="font-weight-bold text-primary">Engineering</p>
 									<p><?= $supplier["management_project"] ?></p>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-6">
-									<p class="font-weight-bold text-primary">Engineering</p>
+									<p class="font-weight-bold text-primary">Panel Number</p>
 									<p><?= $supplier["customer"] ?></p>
 								</div>
 								<div class="col-lg-6">
-									<p class="font-weight-bold text-primary">Date and Day</p>
+									<p class="font-weight-bold text-primary">Production</p>
 									<p><?= $supplier["end_user"] ?></p>
 								</div>
 							</div>
