@@ -79,14 +79,19 @@ class Supplier extends CI_Controller
 		$data['supplier_id'] = null;
 
 		if ($add == "panel") {
-			$this->_validasi("addpanel");
+			// $this->_validasi("addpanel");
 			$spp = $this->uri->segment(4);
 			$data['supplier_id'] = $spp;
 			$data['page'] = "panel";
 		} else {
-			$this->_validasi("add");
+			// $this->_validasi("add");
 			$data['page'] = "project";
 		}
+
+		$this->form_validation->set_rules('panel_name', 'Panel Name', 'required');
+		$this->form_validation->set_rules('panel_number', 'Panel Number', 'required');
+		$this->form_validation->set_rules('quality_inspector', 'Panel Number', 'required');
+		$this->form_validation->set_rules('date', 'Panel Number', 'required');
 
 		if ($this->form_validation->run() == false) {
 			$this->template->load('templates/dashboard', 'supplier/add', $data);
@@ -162,7 +167,6 @@ class Supplier extends CI_Controller
 	}
 
 	public function editpanel($getId){
-		$add = $this->uri->segment(3);
 		$data['title'] = "Non - Conformance Report";
 		$data['projects'] = $this->admin->get('project', ["id_panel" => $getId]);
 		

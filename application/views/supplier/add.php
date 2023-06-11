@@ -177,62 +177,6 @@
 						</div>
 					</div>
 					<div class="row form-group">
-						<label class="col-md-3 text-md-right" for="panel_vendor">Vendor Panel</label>
-						<div class="col-md-9">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1"><i
-												class="fa fa-fw fa-user-tie"></i></span>
-								</div>
-								<input value="<?= set_value('panel_vendor'); ?>" name="panel_vendor" id="panel_vendor"
-									   type="text" class="form-control" placeholder="Panel Vendor">
-							</div>
-							<?= form_error('panel_vendor', '<small class="text-danger">', '</small>'); ?>
-						</div>
-					</div>
-					<div class="row form-group">
-						<label class="col-md-3 text-md-right" for="production">Production</label>
-						<div class="col-md-9">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1"><i
-												class="fa fa-fw fa-user-tie"></i></span>
-								</div>
-								<input value="<?= set_value('production'); ?>" name="production" id="production"
-									   type="text" class="form-control" placeholder="Production">
-							</div>
-							<?= form_error('production', '<small class="text-danger">', '</small>'); ?>
-						</div>
-					</div>
-					<div class="row form-group">
-						<label class="col-md-3 text-md-right" for="engineering">Engineering</label>
-						<div class="col-md-9">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1"><i
-												class="fa fa-fw fa-user-tie"></i></span>
-								</div>
-								<input value="<?= set_value('engineering'); ?>" name="engineering" id="engineering"
-									   type="text" class="form-control" placeholder="Engineering">
-							</div>
-							<?= form_error('engineering', '<small class="text-danger">', '</small>'); ?>
-						</div>
-					</div>
-					<div class="row form-group">
-						<label class="col-md-3 text-md-right" for="conditions">Conditions</label>
-						<div class="col-md-9">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text" id="basic-addon1"><i
-												class="fa fa-fw fa-user-tie"></i></span>
-								</div>
-								<input value="<?= set_value('conditions'); ?>" name="conditions" id="conditions"
-									   type="text" class="form-control" placeholder="conditions">
-							</div>
-							<?= form_error('conditions', '<small class="text-danger">', '</small>'); ?>
-						</div>
-					</div>
-					<div class="row form-group">
 						<div class="col-md-9 offset-md-3">
 							<button type="submit" class="btn btn-success">Save</button>
 							<button type="reset" class="btn btn-danger">Reset</button>
