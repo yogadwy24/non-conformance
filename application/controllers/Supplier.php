@@ -162,8 +162,8 @@ class Supplier extends CI_Controller
 	public function ncr($getId)
 	{
 		$data['title'] = "Non Conformance (NC) Finding in Factory Routine Test";
-		$data['supplier'] = $this->admin->get('supplier', ["id_supplier" => $getId]);
-		$data['projects'] = $this->admin->getPanels($getId);
+		$data['projects'] = $this->admin->get('project', ["id_panel" => $getId]);
+		$data['supplier'] = $this->admin->get('supplier', ["id_supplier" => $data['projects']['supplier_id']]);
 		$this->template->load('templates/dashboard', 'supplier/ncr', $data);
 	}
 

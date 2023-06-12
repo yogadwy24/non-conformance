@@ -17,7 +17,7 @@
                         Add Panel
                     </span>
 				</a>
-				<a href="<?= base_url('supplier') ?>" class="btn btn-sm btn-secondary btn-icon-split">
+				<a href="<?= base_url('supplier/detail/').$supplier['id_supplier'] ?>" class="btn btn-sm btn-secondary btn-icon-split">
                     <span class="icon">
                         <i class="fa fa-arrow-left"></i>
                 	</span>
@@ -37,7 +37,7 @@
 							<div class="row">
 								<div class="col-lg-6">
 									<p class="font-weight-bold text-primary">Panel Name</p>
-									<p><?= $supplier["vendor_panel"] ?></p>
+									<p><?= $projects["panel_name"] ?></p>
 								</div>
 								<div class="col-lg-6">
 									<p class="font-weight-bold text-primary">Engineering</p>
@@ -47,27 +47,27 @@
 							<div class="row">
 								<div class="col-lg-6">
 									<p class="font-weight-bold text-primary">Panel Number</p>
-									<p><?= $supplier["customer"] ?></p>
+									<p><?= $projects["panel_number"] ?></p>
 								</div>
 								<div class="col-lg-6">
 									<p class="font-weight-bold text-primary">Production</p>
-									<p><?= $supplier["end_user"] ?></p>
+									<p><?= $projects["production"] ?></p>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-6">
 									<p class="font-weight-bold text-primary">Quality Inspector</p>
-									<p>150</p>
+									<p><?= $projects['quality_inspector'] ?></p>
 								</div>
 								<div class="col-lg-6">
 									<p class="font-weight-bold text-primary">Conditions</p>
-									<p><?= $supplier["project_number"] ?></p>
+									<p><?= $projects["conditions"] ?></p>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-6">
 									<p class="font-weight-bold text-primary">Date and Day</p>
-									<p>150</p>
+									<p><?= $projects["date"] ?></p>
 								</div>
 							</div>
 						</section>
